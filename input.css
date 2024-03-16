@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active .faq__answer {
+    padding-bottom: 16px;
+    height: auto;
+}
+
+.active .faq__question {
+    font-weight: bold;
+}
+
+.active .faq__question svg {
+    transform: rotate(180deg);
+}
+
+.faq__question {
+    margin: 16px 0;
+}
