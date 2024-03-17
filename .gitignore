@@ -17,8 +17,6 @@
 .prettierignore
 .idea
 
-README.md
-README-template.md
 style-guide.md
 
 node_modules/

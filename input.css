@@ -14,7 +14,3 @@
 .active .faq__question svg {
     transform: rotate(180deg);
 }
-
-.faq__question {
-    margin: 16px 0;
-}
