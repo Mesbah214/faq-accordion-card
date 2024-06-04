@@ -2,15 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.active .faq__answer {
-    padding-bottom: 16px;
-    height: auto;
-}
+@layer components {
+    .accordion__body {
+        @apply max-h-[100px] opacity-100 scale-y-100 visible origin-top transition-all duration-500
+    }
 
-.active .faq__question {
-    font-weight: bold;
-}
-
-.active .faq__question svg {
-    transform: rotate(180deg);
+    .accordion__body.is__hidden {
+        @apply invisible max-h-0 opacity-0 scale-y-0 overflow-hidden
+    }
 }
