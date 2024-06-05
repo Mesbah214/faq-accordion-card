@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="text-html">
 <head>
     <meta charset="UTF-8">
     <!-- displays site properly based on user's device -->
@@ -16,26 +16,28 @@
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
-<body>
-<main class="relative bg-gradient-to-t from-bg-soft-blue to-bg-soft-violet min-h-screen md:flex md:justify-center md:items-center">
-    <section class="w-[90%] rounded-3xl shadow-2xl bg-white h-fit absolute top-[50%] left-[50%] md:top-0 md:left-0 translate-x-[-50%] translate-y-[-40%] md:translate-x-0 md:translate-y-0 md:max-w-[40rem] lg:max-w-[57.5rem] md:flex md:relative">
+<body class="text-[1.2rem]">
+<main class="bg-gradient-to-t from-bg-soft-blue to-bg-soft-violet min-h-screen flex justify-center items-center">
+    <section class="w-[90%] sm:w-[70%] md:w-[90%] md:max-w-[920px] md:my-[4rem] mx-[24px] rounded-[21px] shadow-2xl bg-white h-fit md:flex md:relative">
         <div class="relative md:w-1/2 md:overflow-hidden">
-            <picture class="absolute left-[50%] top-[-111px] translate-x-[-50%] block w-[238px] md:w-[304px] lg:w-[472px] md:top-[50%] md:translate-y-[-50%] md:translate-x-[-66%]">
+            <picture class="absolute left-1/2 top-[-111px] -translate-x-1/2 block w-[238px] md:w-[372px] lg:w-[472px] md:top-[50%] md:-translate-y-1/2 md:translate-x-0 md:-left-[65px] z-10">
                 <source media="(max-width: 767px)" srcset="images/illustration-woman-online-mobile.svg">
                 <img src="images/illustration-woman-online-desktop.svg" alt="illustration woman online">
             </picture>
-            <picture class="block absolute w-[238px] left-[50%] translate-x-[-50%] md:w-[620px] lg:w-[966px] md:top-[50%] md:left-[50%] md:translate-y-[-57%] md:translate-x-[-83%]">
+            <picture class="block absolute w-[238px] left-1/2 -translate-x-1/2 md:w-[966px] md:-bottom-[25%] md:-left-[182px] lg:-bottom-[32%] lg:-left-[80px]">
                 <source media="(max-width: 767px)" srcset="images/bg-pattern-mobile.svg">
                 <img src="images/bg-pattern-desktop.svg" alt="pattern">
             </picture>
         </div>
 
-        <div class="px-6 pb-12 pt-[7.5rem] md:w-1/2 md:pb-[52px] md:pr-[60px] md:pt-[46px] lg:pb-[82px] lg:pr-[94px] lg:pt-[72px]">
-            <h1 class="font-bold text-primary-text-blue text-[32px] tracking-[1.6px] text-center uppercase mb-8 lg:text-left xl:mb-[46px]">faq</h1>
-            <div class="text-[12px]">
-                <div class="border-b-2 border-dividers-blue pb-[10px]">
-                    <h2 class="py-[10px] mt-[10px] text-[13px] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
-                        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>How many team members can I invite?
+        <div class="px-[24px] sm:px-[48px] md:pl-0 custom-sm:px-[40px] pb-[4.8rem] pt-[12.6rem] md:w-1/2 md:pb-[8.5rem] md:pr-[48px] md:pt-[6.2rem] lg:pr-[96px]">
+            <h1 class="font-bold text-primary-text-blue text-[3.2rem] text-center uppercase mb-[3.1rem] md:text-left xl:mb-[46px]">faq</h1>
+            <!-- acccordion items -->
+            <div>
+                <div class="border-b-2 border-dividers-blue pb-[1.8rem] mt-[1.6rem]">
+                    <h2 class="text-[1.4rem] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
+                        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" class="w-full focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded flex justify-between items-center" data-accordion-header>
+                            <p class="w-[90%] text-left">How many team members can I invite?</p>
                             <svg aria-hidden="true" class="text-primary-text-red transition-[rotate] ease-in-out duration-500" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 .799l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" />
                             </svg>
@@ -43,74 +45,74 @@
                     </h2>
                     <section id="accordion-panel-1" aria-labelledby="accordion-header-1" class="accordion__body is__hidden" aria-hidden="true" inert>
                         <div>
-                            <h3 class="text-neutral-text-dark-grayish-blue mt-[6px] mb-[10px]">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</h3>
+                            <h3 class="text-neutral-text-dark-grayish-blue mt-[1.1rem] w-[90%]">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</h3>
                         </div>
                     </section>
                 </div>
-                <div class="border-b-2 border-dividers-blue pb-[10px]">
-                    <h2 class="py-[10px] mt-[10px] text-[13px] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
-                        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>What is the maximum file upload size?
+                <div class="border-b-2 border-dividers-blue pb-[1.8rem] mt-[1.6rem]">
+                    <h2 class="text-[1.4rem] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
+                        <button id="accordion-header-2" aria-expanded="false" aria-controls="accordion-panel-2" class="w-full focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded flex justify-between items-center" data-accordion-header>
+                            <p class="w-[90%] text-left">What is the maximum file upload size?</p>
                             <svg aria-hidden="true" class="text-primary-text-red transition-[rotate] ease-in-out duration-500" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 .799l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" />
                             </svg>
                         </button>
                     </h2>
-                    <section id="accordion-panel-1" aria-labelledby="accordion-header-1" class="accordion__body is__hidden" aria-hidden="true" inert>
+                    <section id="accordion-panel-2" aria-labelledby="accordion-header-2" class="accordion__body is__hidden" aria-hidden="true" inert>
                         <div>
-                            <h3 class="text-neutral-text-dark-grayish-blue mt-[6px] mb-[10px]">No more than 2GB. All files in your
-                            account must fit your allotted storage space.</h3>
+                            <h3 class="text-neutral-text-dark-grayish-blue mt-[1.1rem] w-[90%]">No more than 2GB. All files in your account must fit your allotted storage space.</h3>
                         </div>
                     </section>
                 </div>
-                <div class="border-b-2 border-dividers-blue pb-[10px]">
-                    <h2 class="py-[10px] mt-[10px] text-[13px] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
-                        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>How do I reset my password?
+                <div class="border-b-2 border-dividers-blue pb-[1.8rem] mt-[1.6rem]">
+                    <h2 class="text-[1.4rem] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
+                        <button id="accordion-header-3" aria-expanded="false" aria-controls="accordion-panel-3" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>
+                            <p class="w-[90%] text-left">How do I reset my password?</p>
                             <svg aria-hidden="true" class="text-primary-text-red transition-[rotate] ease-in-out duration-500" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 .799l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" />
                             </svg>
                         </button>
                     </h2>
-                    <section id="accordion-panel-1" aria-labelledby="accordion-header-1" class="accordion__body is__hidden" aria-hidden="true" inert>
+                    <section id="accordion-panel-3" aria-labelledby="accordion-header-3" class="accordion__body is__hidden" aria-hidden="true" inert>
                         <div>
-                            <h3 class="text-neutral-text-dark-grayish-blue mt-[6px] mb-[10px]">Click “Forgot password” from the login page or
-                            “Change password” from your profile page. A reset link will be emailed to you.</h3>
+                            <h3 class="text-neutral-text-dark-grayish-blue mt-[1.1rem] w-[90%]">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</h3>
                         </div>
                     </section>
                 </div>
-                <div class="border-b-2 border-dividers-blue pb-[10px]">
-                    <h2 class="py-[10px] mt-[10px] text-[13px] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
-                        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>Can I cancel my subscription?
+                <div class="border-b-2 border-dividers-blue pb-[1.8rem] mt-[1.6rem]">
+                    <h2 class="text-[1.4rem] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
+                        <button id="accordion-header-4" aria-expanded="false" aria-controls="accordion-panel-4" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>
+                            <p class="w-[90%] text-left">Can I cancel my subscription?</p>
                             <svg aria-hidden="true" class="text-primary-text-red transition-[rotate] ease-in-out duration-500" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 .799l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" />
                             </svg>
                         </button>
                     </h2>
-                    <section id="accordion-panel-1" aria-labelledby="accordion-header-1" class="accordion__body is__hidden" aria-hidden="true" inert>
+                    <section id="accordion-panel-4" aria-labelledby="accordion-header-4" class="accordion__body is__hidden" aria-hidden="true" inert>
                         <div>
-                            <h3 class="text-neutral-text-dark-grayish-blue mt-[6px] mb-[10px]">Yes! Send us a message and we’ll process your
-                            request no questions asked.</h3>
+                            <h3 class="text-neutral-text-dark-grayish-blue mt-[1.1rem] w-[90%]">Yes! Send us a message and we’ll process your request no questions asked.</h3>
                         </div>
                     </section>
                 </div>
-                <div class="border-b-2 border-dividers-blue pb-[10px]">
-                    <h2 class="py-[10px] mt-[10px] text-[13px] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
-                        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>Do you provide additional support?
+                <div class="border-b-2 border-dividers-blue pb-[1.8rem] mt-[1.6rem]">
+                    <h2 class="text-[1.4rem] flex justify-between items-center cursor-pointer text-neutral-text-very-dark-grayish-blue hover:text-primary-text-red transition-colors duration-100">
+                        <button id="accordion-header-5" aria-expanded="false" aria-controls="accordion-panel-5" class="focus-visible:outline outline-2 outline-bg-soft-violet outline-offset-2 rounded w-full flex justify-between items-center" data-accordion-header>
+                            <p class="w-[90%] text-left">Do you provide additional support?</p>
                             <svg aria-hidden="true" class="text-primary-text-red transition-[rotate] ease-in-out duration-500" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 .799l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" />
                             </svg>
                         </button>
                     </h2>
-                    <section id="accordion-panel-1" aria-labelledby="accordion-header-1" class="accordion__body is__hidden" aria-hidden="true" inert>
+                    <section id="accordion-panel-5" aria-labelledby="accordion-header-5" class="accordion__body is__hidden" aria-hidden="true" inert>
                         <div>
-                            <h3 class="text-neutral-text-dark-grayish-blue mt-[6px] mb-[10px]">Chat and email support is available 24/7. Phone
-                            lines are open during normal business hours.</h3>
+                            <h3 class="text-neutral-text-dark-grayish-blue mt-[1.1rem] w-[90%]">Chat and email support is available 24/7. Phone lines are open during normal business hours.</h3>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
 
-        <img class="hidden md:block md:absolute md:max-lg:w-[123px] md:top-[42%] md:left-[-13%]" src="images/illustration-box-desktop.svg" alt="box">
+        <img class="hidden md:block md:absolute md:max-lg:w-[150px] md:top-[43%] md:left-[0] md:-translate-x-1/2 z-10" src="images/illustration-box-desktop.svg" alt="box">
     </section>
 </main>
 </body>

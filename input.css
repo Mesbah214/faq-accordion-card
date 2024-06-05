@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+    .text-html {
+        @apply text-[62.5%]
+    }
     .accordion__body {
         @apply max-h-[100px] opacity-100 scale-y-100 visible origin-top transition-all duration-500
     }
