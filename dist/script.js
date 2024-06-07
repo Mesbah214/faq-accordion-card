@@ -1,37 +1,30 @@
-// Works for accordion
-// (function accordion() {
-//     let items = document.querySelectorAll('.faq__question')
-//     let containers = document.querySelectorAll('.faq__item')
-
-//     items.forEach((item, index) => {
-//         item.addEventListener('click', () => {
-//             containers[index].classList.toggle('active')
-
-//             removeActive(index)
-//         })
-//     })
-
-//     function removeActive(id) {
-//         containers.forEach((container, index) => {
-//             if (index !== id) {
-//                 container.classList.remove('active')
-//             }
-//         })
-//     }
-// })()
-
 const accordionHeaders = document.querySelectorAll('[data-accordion-header]')
 
-Array.prototype.forEach.call(accordionHeaders, (accordionHeader) => {
+accordionHeaders.forEach((accordionHeader, index) => {
     let target = accordionHeader.parentElement.nextElementSibling
     let svg = accordionHeader.lastElementChild
+    
     accordionHeader.onclick = () => {
         let expanded = accordionHeader.getAttribute('aria-expanded') === 'true' || false
         accordionHeader.setAttribute('aria-expanded', !expanded)
         target.setAttribute('aria-hidden', expanded)
         target.inert = expanded
         svg.style.rotate = expanded ? '0deg' : '180deg'
-        accordionHeader.style.fontWeight = expanded ? 'normal' : 'bold'
         target.classList.toggle('is__hidden')
+
+        // collapse other accordion body that are currently open
+        accordionHeaders.forEach(function collapseInactive(accordionHeader, id) {
+            let inactiveTarget = accordionHeader.parentElement.nextElementSibling
+
+            if(!inactiveTarget.classList.contains('is__hidden')) {
+                if (id != index) {
+                    accordionHeader.setAttribute('aria-expanded', false)
+                    inactiveTarget.classList.add('is__hidden')
+                    accordionHeader.lastElementChild.style.rotate = '0deg'
+                    inactiveTarget.inert = true
+                    inactiveTarget.setAttribute('aria-hidden', true)
+                }
+            }
+        })
     }
 })

@@ -7,7 +7,7 @@
         @apply text-[62.5%]
     }
     .accordion__body {
-        @apply max-h-[100px] opacity-100 scale-y-100 visible origin-top transition-all duration-500
+        @apply max-h-[100px] opacity-100 scale-y-100 visible origin-top transition-all duration-500 motion-reduce:transition-none
     }
 
     .accordion__body.is__hidden {
